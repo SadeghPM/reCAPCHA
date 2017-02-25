@@ -2,7 +2,9 @@
 namespace Sadeghpm\Recapcha;
 
 class GoogleReCapcha {
-
+	/**
+	 * Stores all error codes and its string representation
+	 */
 	private $error_codes = [
 		"missing-input-secret"   => "The secret parameter is missing.",
 		"invalid-input-secret"   => "The secret parameter is invalid or malformed.",
@@ -10,6 +12,11 @@ class GoogleReCapcha {
 		"invalid-input-response" => "The response parameter is invalid or malformed.",
 	];
 
+	/**
+	 * Set the secret
+	 *
+	 * @param string $secret The shared key between your site and reCAPTCHA.
+	 */
 	public function __construct($secret) {
 		$this->secret = $secret;
 	}
@@ -35,12 +42,21 @@ class GoogleReCapcha {
 			]);
 		}
 	}
-
+	/**
+	 * Verifying the user's response
+	 *
+	 * @return boolean
+	 */
 	public function verify() {
 		$this->googleResponse = $this->getGoogle();
 		return $this->googleResponse['success'];
 	}
 
+	/**
+	 * Send the response to google server
+	 *
+	 * @return object google response object
+	 */
 	private function getGoogle() {
 		$post = [
 			'secret'   => $this->secret,
@@ -55,6 +71,11 @@ class GoogleReCapcha {
 		return json_decode($response, true);
 	}
 
+	/**
+	 * Format the error codes to its string representation
+	 *
+	 * @return string errors description
+	 */
 	private function formatErrors() {
 		$stringError = '';
 		foreach ($this->googleResponse['error-codes'] as $code) {
