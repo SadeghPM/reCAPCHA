@@ -38,7 +38,6 @@ class GoogleReCapcha {
 			return $response->withStatus(403)->withJson([
 				'ok'          => false,
 				'description' => $this->formatErrors(),
-				'result'      => [],
 			]);
 		}
 	}
