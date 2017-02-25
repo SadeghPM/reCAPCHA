@@ -12,4 +12,15 @@ $ composer require sadegh-pm/recapcha
 ```
 
 ## Usage
-Coming soon
+Add the middleware in the route that you inserted google reCAPCHA. for example i inserted google reCAPCHA in the <code>/login</code> route:
+```php
+  $app->post('/login', App\Api\Login::class . ':verify')
+      ->add( new \SadeghPM\Recapcha\GoogleReCapcha($reCAPCHA_Secret) );
+```
+if google reCAPCHA verifying the user's response , your route will be resolved otherwise app will be terminate.the terminated  response status code is <code>403</code> and body is a json:
+```json
+{
+  "ok":false,
+  "description":"errors..."
+}
+```
