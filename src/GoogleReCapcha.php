@@ -1,5 +1,5 @@
 <?php
-namespace Sadeghpm\Recapcha;
+namespace SadeghPM\Recapcha;
 
 class GoogleReCapcha {
 	/**
