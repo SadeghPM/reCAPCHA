@@ -12,7 +12,7 @@ $ composer require sadegh-pm/recapcha
 ```
 
 ## Usage
-Add the middleware in the route that you inserted google reCAPCHA. for example i inserted google reCAPCHA in the <code>/login</code> route:
+Add the middleware in the route that you rendering the reCAPTCHA widget. for example i inserted reCAPTCHA widget in the <code>/login</code> route:
 ```php
   $app->post('/login', App\Api\Login::class . ':verify')
       ->add( new \SadeghPM\Recapcha\GoogleReCapcha($reCAPCHA_Secret) );
