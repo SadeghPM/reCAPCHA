@@ -1,5 +1,5 @@
 {
-    "name": "SadeghPM/reCAPCHA",
+    "name": "sadegh/recapcha",
     "description": "PSR-7 Google reCAPCHA Middleware",
     "keywords": [
         "psr-7",
