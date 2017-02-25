@@ -1,5 +1,15 @@
-# reCAPCHA
-PSR-7 Google reCAPCHA Middleware<br>
+# PSR-7 Google reCAPCHA Middleware
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)<br>
 This middleware implement server side google reCAPCHA v2 validation.It was originally developed for Slimframework 3 but can be used with any framework using PSR-7 style middlewares.
 It is very simple and without any dependancy.
+
+## Install
+
+Install latest version using [composer](https://getcomposer.org/).
+
+``` bash
+$ composer require sadegh-pm/recapcha
+```
+
+## Usage
+Coming soon
