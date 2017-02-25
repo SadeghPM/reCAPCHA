@@ -1,0 +1,25 @@
+{
+    "name": "SadeghPM/reCAPCHA",
+    "description": "PSR-7 Google reCAPCHA Middleware",
+    "keywords": [
+        "psr-7",
+        "middleware",
+        "recapcha",
+        "slimframework"
+    ],
+    "homepage": "https://github.com/SadeghPM/reCAPCHA",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sadegh Pourmohamadi",
+            "email": "SadeghPM@gmail.com",
+            "homepage": "http://www.4xmen.ir/",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SadeghPM\\Recapcha\\": "src"
+        }
+    }
+}
